@@ -1,1 +1,9 @@
-# tower.yml
+ ---
+- name: Inatsall something
+  hosts: all
+  tasks:
+    - name: Install on centos
+     when: ansible_os_family == "RedHat"
+      package:
+        name: telnet
+        state: present
